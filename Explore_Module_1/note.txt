@@ -1,0 +1,172 @@
+- To display all the results, we need to use the print() command
+- If we were to put them all on the same line, we'd get an error
+- All these instructions are collectively known as code. And each line of instruction is known as a line of code.
+- When we write code, we program the computer to do something. For this reason, we also call the code we write a computer program, or a program. The program we wrote in the previous exercise had three lines of code, but a program can be as small as one line.
+- The code we write serves as input to the computer. The result of executing the code is called output.
+- that the code editor displays the output of the last line of code regardless of whether we use print() or not
+- The sequence of characters that follows the # symbol is called a code comment. We can also use code comments to add information about our code
+- To perform multiplication, we need to use the *
+- To perform division, we use the / character
+- We can also perform exponentiation (raising a number to a power) by using **
+- When we run the code result = 20, the value 20 is saved in the computer memory. The computer memory has many storage locations, and 20 is saved to one particular location.
+- The storage location for 20 is more commonly known as a variable
+- we stored 20 in a variable (storage location) named result — so result is a variable name
+- naming a variable a result will output a syntax error because we're not allowed to use space characters in variable names.
+- Note that variable names are case sensitive, which means that a variable named result is different than a variable named Result:
+These are the two syntax rules we need to be aware of when we're naming variables:
+- We must use only letters, numbers, or underscores (we can't use apostrophes, hyphens, whitespace characters, etc.).
+Variable names cannot start with a number.
+- There are several syntax shortcuts we can use to update a variable when we're doing arithmetical operations. In the code above, for instance, we can write x += 70 instead of x = x + 70
+- Whenever the syntax is correct but the computer still returns an error for one reason or another, it's called a runtime error.
+- In Python, the = operator tells us that the value on the right is assigned to the variable on the left. It doesn't tell us anything about equality. We call = an assignment operator
+- and we read code like x = 5 as "five is assigned to x" or "x is assigned five," but not "x equals five."
+- We can use the type() command to see the type of a value, and confirm that Python distinguishes between integers and decimal numbers:
+- Notice that the integer 2 has the integer type, and the decimal number 8.5 has the float type. All integers have the int type, and all decimal numbers have the float type.
+- In computer programming, values are classified into different types, or data types.
+- It's possible to convert a float to an integer and vice versa. To convert an integer to a float, we can use the float() command. To convert a float to an integer, we can use the int() command:
+- int() will always round a float down, even if the number after the decimal point is greater than five.
+- If we want to round off a number, we can instead use the round() command, which has more flexibility and can also round up
+- In Python, we can create text by enclosing a sequence of characters within quotation marks (" ")
+- In programming, we call sequences of characters like "Facebook", "USD", or "dasdaslkj" strings. In Python, a string is of the str type
+- When we create strings, we're not limited to using letters — we can also use numbers, spaces, or other characters
+- Fortunately, we can cancel the special function of the second single quotation mark (its special function is to end the string) by typing a backslash character (\) in front of it:
+- The \ character has a special function within a string: it escapes (cancels) the special function of characters
+- The process of linking two or more strings together is called concatenation.
+- When we have two or more distinct strings, it's possible to link them together using the + operator. It's also possible to concatenate a string with one or more copies of itself using the * operator, followed by a number which specifies the number of times the string has to be multiplied
+- We can't perform arithmetical operations between strings and integers, or strings and floats (decimal numbers).
+- We can use the int() or float() command to convert a string of type str to a number of type int or float.
+- Note that we can also convert an int or a float to a str using the str() command. Below, we convert the integer 4 to the string '4'. On a side note, strings are displayed without quotation marks when we use the print() command.
+- So far, we've only been working with one-line strings, but we can also write strings over many lines using the triple quotation mark symbol (''' or """)
+- Each value in the table is a data point. For instance, the first row has five data points. A collection of data points make up a data set.
+- Creating a variable for each data point in our data set would be a cumbersome process. Fortunately, we can store data more efficiently using lists. To create the list above, we only need to:
+Separate the data points with a comma.
+Surround the sequence of data points with brackets.
+- To find the length of a list, we can use the len() command
+- Each element (data point) in a list has a specific number associated with it, called an index number. The indexing always starts at 0, so the first element will have the index number 0, the second element the index number 1, and so on.
+- To quickly find the index of a list element, identify its position number in the list, and then subtract 1 . For example, the string 'USD' is the third element of the list (position number 3), so its index number must be 2 since 3 -1 = 2.
+- The index numbers help us retrieve individual elements from a list. Looking back at the list row_1 from the code example above, we can retrieve the first element (the string 'Facebook') with the index number 0 by running the code row_1[0].
+- The syntax for retrieving individual list elements follows the model list_name[index_number]. For instance, the name of our list above is row_1 and the index number of the first element is 0 — following the list_name[index_number] model, we get row_1[0], where the index number 0 is in square brackets after the variable name row_1.
+- In Python, we have two indexing systems for lists:
+Positive indexing: the first element has the index number 0, the second element has the index number 1, and so on.
+Negative indexing: the last element has the index number -1, the second to last element has the index number -2, and so on.
+- When we select the first n elements (n stands for a number) from a list named a_list, we can use the syntax shortcut a_list[0:n]
+- When we selected the first three elements, we sliced a part of the list. For this reason, the process of selecting a part of a list is called list slicing.
+- To retrieve any list slice we want:
+We first need to identify the first and the last element of the slice.
+We then need to identify the index numbers of the first and the last element of the slice.
+Finally we can retrieve the list slice we want by using the syntax a_list[m:n], where:
+m represents the index number of the first element of the slice; and
+n represents the index number of the last element of the slice plus one (if the last element has the index number 2, then we n will be 3, if the last element has the index number 4, then n will be 5, and so on).
+- When we need to select the first or last x elements (x stands for a number), we can use even simpler syntax shortcuts:
+a_list[:x] when we want to select the first x elements.
+a_list[-x:] when we want to select the last x elements.
+-  A list that contains other lists is called a list of lists.
+- there's an easier way to retrieve the same value of 3.5 by chaining the two indices ([0] and [-1]) — the code data_set[0][-1] retrieves 3.5
+- Once we've opened the file, we read it in using a command called reader()
+- we want to repeat the following process: for each element in
+- *contoh :
+for each_list in app_data_set:
+    print(each_list)
+*ket : 
+setelah in, langsung ke variable namenya
+setelah variable name, pake titik dua, biar ga terjadi syntax error
+setelah line of code yang pertama, di line of code yang kedua dimulai dengan 4 spasi atau 1 tab
+- The technique we've just learned is called a loop.
+- iteration variable adalah variable yang ada di antara for dan in, contohnya for row in a_list, kata row tersebut adalah iteration variable
+- iterable variable adalah variable yang berada setelah in, atau variable yang dipanggil. Iteration variable dalam contoh diatas adalah kata a_list
+- Because we always start with for (like in for some_variable in some_list:), this technique is known as a for loop.
+- Now we'll learn an alternative way to compute the average rating value. Once we create a list, we can add (or append) values to it using the append() command.
+- Unlike other commands we've learned, notice that append() has a special syntactical usage, following the pattern list_name.append()
+- use the sum() command to sum up all the ratings (to be able to use sum(), we'll need to store the ratings as floats or integers); and then
+- 1. What's the average rating of non-free apps?
+2. What's the average rating of free apps?
+However, to answer the two questions above, we first need to find a way to separate free apps from non-free apps because they are all mixed together in our data set. o implement the condition above (If the price is equal to 0.0, then do:) in our code, we can use an if statement:
+- A few things to notice about the if statement:
+ 1.) The if statement starts with if, it continues with price == 0.0, and it ends with :.
+2.) We use the == operator to check whether price is equal to 0.0. Be careful not to confuse == with = (recall that = is a variable assignment operator in Python, we use it to assign values to variables, and it doesn't tell us anything about equality).
+3.) ratings.append(rating) is indented four spaces to the right relative to the if statement.
+-  == is the sign for equal
+- != is the sign for not equal
+-  Fortunately, we can combine two or more conditions together into a single if statement using the and keyword.
+- We need to isolate the rating of an app only if the genre is "Social Networking" or "Games," not "Social Networking" and "Games." To account for this difference, we can use or instead of and:
+- kita juga bisa menggunakan or  dan and secara bersamaan, tetapi lebih baik menggunakan tanda kurung agar python bisa mengerti lebih baik logika kita, dan untuk menjauhkan dari logical error
+- For logical errors, the computer doesn't raise any error — the code runs just fine, and the logical error slips through. To prevent this, we should try to pay extra attention to the logic of our code.
+- The code within the body of an else clause is executed only if the if statement that precedes it resolves to False.
+- Note that an else clause must be combined with a preceding if statement. We can have an if statement without an else clause, but we can't have an else clause without a preceding if statement
+- To stop the computer from doing redundant operations, we can use elif clauses:
+- The code within the body of an elif clause is executed only if:
+The preceding if statement (or the other preceding elif clauses) resolves to False; and
+The condition specified after the elif keyword evaluates to True.
+- ote, however, that the logic is different when we use an else clause. For elif price >= 50, app.append('very expensive') will be executed only if the price is greater than or equal to 50. For else, there's no condition to be met (other than the previous if and elif clauses resolving to False), and app.append('very expensive') will be executed even if the price has a value of -5 or -100.
+- Just like else, the elif clause must be combined with a preceding if statement and can't stand on its own:
+- Boolean untuk membandingkan dan menentukan benar atau salah, dengan tanda <, >, atau == dan !=, ataupun >=, <=
+- What if we could transform the index numbers to content rating values? This way, the mapping between content ratings and their corresponding numbers should become much clearer. we will use Dictionary with the sign {}
+With dictionaries, there's no longer a connection between the index of a value and the position of that value in the dictionary, so the order becomes unimportant. For instance, the index value '4+' will retrieve the value 4433 no matter its position. 4433 could be the first element in the dictionary, the second, the fourth — it doesn't matter.
+- perbedaan list dan dictionaries adalah kita tidak perlu pusing jika ingin memanggil salah satu elements, karena di Dicstionaries kita tidak perlu menggunakan index number
+-  in order to create a dictionary, we need to:
+Map each index to its corresponding value by following an index:value pattern (e.g. '4+': 4433).
+Type the entire sequence of index:value pairs, and separate each pair with a comma (e.g. '4+': 4433, '9+': 987, '12+': 1155, '17+': 622).
+Surround the sequence with curly braces (e.g. {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}).
+- Alternatively, we can create a dictionary and populate it with values by following these steps:
+We create an empty dictionary.
+We add values one by one to that empty dictionary.
+- The index of a dictionary value is called a key. In '4+': 4433, the dictionary key is '4+', and the dictionary value is 4433. As a whole, '4+': 4433 is a key-value pair.
+- Dictionary values can be of any data type: strings, integers, floats, Booleans, lists, and even dictionaries.
+- Dictionary keys can be of almost any data type we've learned so far, except lists and dictionaries. If we use lists or dictionaries as dictionary keys, the computer raises an error:
+- Once we've created a dictionary, we can check whether a certain value exists in the dictionary as a key. We can check, for instance, whether the value '12+' exists as a key in the dictionary {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}. To do that, we use the in operator.
+- Checking whether 4433 or 987 exists in content_ratings also returns False because the search is done only over the dictionary's keys (4433 and 987 exist as dictionary values in content_ratings).
+-The number of times a unique value occurs is also called frequency. For this reason, tables like the one below are called frequency tables.
+- We've seen that Python has a couple of ready-made functions like sum(), len(), min(), and max(). These functions are already built into Python and are available for immediate use. Because they are already built-in, they are called built-in functions.
+- To create the square() function above, we:
+Started with the def statement, where we:
+1.
+Specified the name of the function (square)
+- Specified the name of the variable (a_number) that will serve as input
+Surrounded the input variable a_number within parentheses
+- Ended the line of code with a colon (:)
+2.
+Specified what we want to do with the input a_number (in the code below the def statement)(function body's)
+- We multiplied a_number by itself: a_number * a_number
+- Then we assigned the result of a_number * a_number to a variable named squared_number
+3.
+Ended with the return statement, where we specified what we want returned as the output.
+- The output is the variable squared_number, which stores the result of a_number * a_number.
+
+- Tuple sama dengan list fungsinya, bedanya menggunakan tanda (), dan tidak bisa dirubah sama sekali
+- Structurally, the function above is composed of a header (which contains the def statement), a body, and a return statement. Together, these three elements make up the function's definition.
+- Input variables like a_number are more often known as parameters. So, a_number is a parameter of the square() function. When the parameter a_number takes a value (like 6 in square(a_number=6)), that value is called an argument.
+- The a_number variable in def square(a_number) is the input variable, and whether we type it out or not when we use the function is optional. When we use square(6) instead of square(a_number=6), Python will automatically assign 6 to the a_number variable behind the scenes. This means that square(6) is essentially the same thing as square(a_number=6).
+- This means we can directly return the result of the expression a_number * a_number and omit the variable assignment step:
+- One of the key aspects that make functions great is reusability.
+- Fortunately, Python allows us to use multiple parameters for the functions we create
+- Because the error is traced back from the initial call to the latest call, the error message is called traceback message, or simply traceback.
+- When we create a function, we can initiate parameters with certain default values — we call these values default arguments.
+- Default arguments are not set in stone, and can be easily modified when we call a function:
+- If all parameters have default arguments, it then becomes possible to call a function without passing in any argument:
+- However, using the name sum() for our function above interferes with the built-in sum() function. When we call sum(), Python won't run the built-in sum() function anymore — it will run instead the sum() function that we wrote. So, we shouldn't use the names of built-in functions to name our own functions. We should also avoid naming variables using the names of the built-in functions because this also causes unwanted interference.
+- Fortunately, it's possible to use multiple return statements. Combining return with an if statement and an else clause, we can implement the ability to specify whether we want a sum or a difference returned:
+- Fortunately, Python allows us to build functions that return more than just one variable. This means that we can create a function that returns both a sum and a difference.
+- When we use return a_sum, difference, Python thinks we want the tuple a_sum, difference returned. This is why multiple variables are returned as tuples. If we wanted to return a list instead of a tuple, we need to use brackets:
+- The part of a program where a variable can be accessed is often called scope.
+- The variables defined in the main program are said to be in the global scope,
+- while the variables defined inside a function are in the local scope.
+- 
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
